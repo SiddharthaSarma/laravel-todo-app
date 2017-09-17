@@ -29,14 +29,12 @@ class TodosController extends Controller
 
 	public function update($id)
 	{	
-		// dd($id);
 		$todo = Todo::find($id);
 		return view('update')->with('todo', $todo);
 	}
 
 	public function save(Request $request, $id)
 	{
-		// dd($request->all());
 		$todo = Todo::find($id);
 		$todo->todo = $request->todo;
 
