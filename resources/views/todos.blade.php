@@ -4,6 +4,6 @@
 </form>
 
 @foreach ($todos as $todo)
-	{{$todo->todo}}
+	{{$todo->todo}} <a href="{{route('todos.delete', ['id' => $todo->id])}}">Delete</a>
 	<hr>
 @endforeach
